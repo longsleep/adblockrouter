@@ -3,5 +3,5 @@
 
 echo "Block list:" $1
 
-cp -v "$1" /etc/ad block/block.hosts
+cp -v "$1" /etc/adblock/block.hosts
 systemctl reload dnsmasq

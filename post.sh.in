@@ -1,0 +1,7 @@
+#!/bin/bash
+# Example post.sh script. Use a post.sh script to put the generated list at the right location and reload the DNS server. The first parameter is the full path ot the generated block list.
+
+echo "Block list:" $1
+
+cp -v "$1" /etc/ad block/block.hosts
+systemctl reload dnsmasq

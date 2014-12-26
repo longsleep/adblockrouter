@@ -1,0 +1,4 @@
+# Add one host per line that should be blocked.
+#softwareupdates.amazon.com
+#amzdigitaldownloads.edgesuite.net
+

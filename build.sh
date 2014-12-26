@@ -64,11 +64,6 @@ echo 'Cleaning up...'
 rm -f "$TMPDIR/block.build.before"
 rm -f "$TMPDIR/block.build.list"
 
-#echo 'Transferring to router...'
-#scp -v $FOLDER/block.hosts root@192.168.1.3:/tmp
-#echo "Restarting dnsmasq ..."
-#ssh root@192.168.1.3 "killall -HUP dnsmasq"
-
 if [ -x "$FOLDER/post.sh" ]
 then
 	. "$FOLDER/post.sh" "$FOLDER/block.hosts"

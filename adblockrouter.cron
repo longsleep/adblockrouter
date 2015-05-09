@@ -1,0 +1,6 @@
+# /etc/cron.d/adblockrouter.cron: crontab entries to auto update adblocking
+
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+0 */6 * * *	root	bash /scripts/adblockrouter/build.sh >/dev/null

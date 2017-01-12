@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # Adblockrouter script to grab and sort a list of adservers and
 # malware, suitable for use in a DNS server like dnsmasq.

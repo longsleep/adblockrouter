@@ -29,7 +29,7 @@ MODE=dnsmasq
 TARGET="$FOLDER/block.hosts"
 
 function usage {
-    echo "Usage: $0 [-m dnsmasq|unbound] [-t <target>]"
+    echo "Usage: $0 [-m dnsmasq|unbound] [-t <target>] [-bl <blacklist>] [-wl <whitelist>] [-s <post-script>]"
 }
 
 # Parse parameters
@@ -42,6 +42,18 @@ case $key in
         ;;
     -t|--target)
         TARGET="$2"
+        shift
+        ;;
+    -bl|--blacklist)
+        BLACKLIST="$2"
+        shift
+        ;;
+    -wl|--whitelist)
+        WHITELIST="$2"
+        shift
+        ;;
+    -s|--script)
+        POSTSCRIPT="$2"
         shift
         ;;
     -h|--help)

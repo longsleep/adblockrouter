@@ -1,10 +1,11 @@
-#!/bin/bash
+#!/bin/sh
 # Use a post.sh script to put the generated list at the right location and
 # reload DNSmasq. The first parameter is the full path ot the generated block
 # list. The block.hosts file should be used in DNSmasq configuration with
 # the addn-hosts parameter.
 
-echo "Block list:" $1
+set -e
+echo "Block list: $1 ($2)"
 
 # Example for DNSmasq on the same host. So use this create /etc/adblock folder
 # and make sure it is writeable by the user running build.sh.

@@ -124,7 +124,8 @@ mv -f "${TARGET}.new" "$TARGET"
 # Notify.
 if [ -x "$POSTSCRIPT" ]
 then
-	. "$POSTSCRIPT" "$TARGET"
+    echo "> Running post script"
+	("$POSTSCRIPT" "$TARGET" "$MODE")
 fi
 
 echo "> Done"
